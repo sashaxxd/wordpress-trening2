@@ -1,0 +1,212 @@
+/*
+Для мобил
+ */
+@media (max-width: 480px) {
+
+    #hit {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 40px 15px 40px 15px;
+    }
+}
+/*
+Для 1024
+ */
+@media (max-width: 1024px) {
+
+
+    #site_logo{
+        float: left;
+
+    }
+
+    #site_logo_img{
+        float: left;
+
+
+    }
+
+    #site_logo_m{
+        float: left;
+        margin-left: 7px;
+    }
+
+
+
+    #logo_img{
+        float: left;
+
+    }
+    #site_phone_text{
+        float: left;
+
+
+    }
+    #site_phone_img{
+        float: left;
+
+
+    }
+    #site_cart_img{
+        float: left;
+
+    }
+    #site_cart_text{
+        float: left;
+
+    }
+
+    #header_menu .row .col-2{
+        clear: both;
+    }
+
+}
+
+/*
+Для десктопов
+ */
+@media (min-width: 1024px){
+    #site_pod_menu {
+        position: fixed;
+        z-index: 1000;
+    }
+    #site_logo{
+        float: left;
+        margin-left: 6px;
+    }
+    #site_logo_img{
+        float: left;
+        margin-top: 7px;
+    }
+    #site_logo_m{
+        float: left;
+        margin-left: 7px;
+    }
+    #site_phone_text{
+        float: left;
+        margin-top: 5px;
+
+    }
+    #site_phone_img{
+        float: left;
+        margin-top: 5px;
+    }
+    #site_cart_img{
+        float: left;
+        margin-top: 9px;
+    }
+    #site_cart_text{
+        float: left;
+        margin-top: 8px;
+    }
+    }
+
+
+
+/**
+Кнопка закрытия меню
+*/
+#ResponsiveMenu-icon:hover{
+    cursor: pointer;
+}
+#site_ResponsiveMenu .toggle:hover {
+    background-color: #D7489A;
+    color: #009966;
+}
+
+.m_close {
+    position: relative;
+    left: 0px;
+    top: 25px;
+    /*width: 23px;*/
+    height: 23px;
+    opacity: 1;
+    cursor: pointer;
+}
+.m_close:hover {
+    opacity: 1;
+}
+.m_close:before, .m_close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 23px;
+    width: 2px;
+    background-color: #FFFFFF;
+}
+.m_close:before {
+    transform: rotate(45deg);
+}
+.m_close:after {
+    transform: rotate(-45deg);
+}
+/*
+Ставим высоту что бы не было рывков при открытии меню
+*/
+#ResponsiveMenu {
+
+    height: auto;
+}
+#v_nalichii {
+    background-color: #29D266;
+    background-image: none;
+    z-index:400;
+}
+#net_v_nalichii{
+    background-color: #B280D5;
+    background-image: none;
+    z-index:400;
+}
+#pod_zakaz{
+    background-color: #FF4200;
+    background-image: none;
+    z-index:400;
+    height: 35px;
+    left: 0px;
+    position: absolute;
+    text-align: left;
+    top: 0px;
+    width: 194px;
+}
+#site_Text_v_nalichii {
+    background-color: transparent;
+    background-image: none;
+    border: 0px #000000 solid;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    width: 138px;
+}
+#site_Text_v_nalichii div {
+    text-align: left;
+}
+#site_Text_pod_zakaz{
+    background-color: transparent;
+    background-image: none;
+    border: 0px #000000 solid;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    width: 198px;
+    height: 17px;
+    left: 11px;
+    position: absolute;
+    top: 9px;
+    color: #FFFFFF;
+    font-family: Proxima Nova Lt;
+    font-size: 16px;
+    z-index: 37;
+}
+#bookm .col-1 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 0px;
+    min-height: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+}

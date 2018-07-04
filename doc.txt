@@ -1,0 +1,18 @@
+1. Геренация базовых файлов для шаблона вордпресс https://underscores.me/
+2. Переносим все файлы в папку шаблона удаляем ненужные файлы
+3. Создаем каталог templates в папк шаблона
+4. main-page.php для главной
+5. Создаем каталог includes и переносим в него файлы из папки inc
+ сгенерированные на сайте https://underscores.me/ - функционал
+6. Создаем каталог assets - фронтенд
+7. В нем подпапки fonts, css, js, image
+8. Создаем каталог woocommerce
+9. Внутри подкаталог includes в нем файлы wc-functions.php
+wc-functions-remove.php(для отключения не нужного функционала)
+10. https://carbonfields.net/ - фреймворк для wp (пока не понял что за хз)
+скачиваем его тут версия 2.2.0 https://github.com/sashaxxd/E-Store-Theme тут 2.1.0
+https://wp-kama.ru/id_8542/carbon-fields-obzor-plagina-i-nachalo-raboty.html#bez-ispolzovaniya-composer
+тут пояснение (это плагин для создания произвольных полей - php namespace oop)
+https://carbonfields.net/zip/latest/ тут можно скачать последнюю версию
+11. Переподключить файл functions.php в корне шаблона
+12. в includes создаем theme-settings.php
