@@ -48,6 +48,11 @@ require get_template_directory() . '/includes/customizer.php';
 /**
  * Load Jetpack compatibility file.
  */
+/**
+ * Меню
+ */
+require get_template_directory() . '/includes/menu.php';
+
 if ( defined( 'JETPACK__VERSION' ) ) {
     require get_template_directory() . '/includes/jetpack.php';
 }

@@ -45,14 +45,22 @@
                                 <div class="row">
                                     <div class="col-1">
                                         <div id="site_logo_img">
-                                            <img src="<?php bloginfo('template_url'); ?>/assets/images/logo.png" id="logo_img" alt="">
+                                            <?php  $logo_id = carbon_get_theme_option('est_header_logo');
+                                            $logo = $logo_id ? wp_get_attachment_image_src($logo_id , 'full') : '';  ?>
+                                            <a href="<?php echo home_url('/');?>"><img src="<?php echo $logo[0];?>" id="logo_img" alt=""></a>
+
+
                                         </div>
                                         <div id="site_logo">
-                                            <span id="site_uid0">MODNYI-KOSTUM<br></span><span id="site_uid1">магазин модной одежды</span><span id="site_uid2"> </span>
+                                            <span id="site_uid0">MODNYI-KOSTUM
+                                                <br></span><span id="site_uid1">магазин модной одежды</span><span id="site_uid2"> </span>
                                         </div>
                                     </div>
                                     <div class="col-2">
                                         <div id="site_ResponsiveMenu">
+                                            <?php
+                                            e_magaz_primary_menu();
+                                            ?>
                                             <label class="toggle" for="ResponsiveMenu-submenu" id="ResponsiveMenu-title"><span id="ResponsiveMenu-icon"><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></span></label>
                                             <input type="checkbox" id="ResponsiveMenu-submenu">
                                             <ul class="ResponsiveMenu" id="ResponsiveMenu">
@@ -61,6 +69,7 @@
                                                 <li><a href="#">&#1042;&#1103;&#1079;&#1072;&#1085;&#1099;&#1077;&nbsp;&nbsp;&#1082;&#1086;&#1089;&#1090;&#1102;&#1084;&#1099;</a></li>
                                                 <li><a href="#">&#1055;&#1083;&#1072;&#1090;&#1100;&#1103;</a></li>
                                                 <li><a href="#">&#1044;&#1086;&#1089;&#1090;&#1072;&#1074;&#1082;&#1072;&nbsp;&#1080;&nbsp;&#1086;&#1087;&#1083;&#1072;&#1090;&#1072;</a></li>
+
                                             </ul>
                                         </div>
                                     </div>
@@ -91,7 +100,10 @@
                 <div class="row">
                     <div class="col-1">
                         <div id="site_Text2">
-                            <span id="site_uid5">МОДНАЯ ЖЕНСКАЯ ОДЕЖДА</span>
+                            <span id="site_uid5">
+                                <?php  $site_name = carbon_get_theme_option('est_site_name') ? carbon_get_theme_option('est_site_name') : get_bloginfo('name'); ?>
+                                <?php echo $site_name; ?>
+                               </span>
                         </div>
                         <div id="site_Text3">
                             <span id="site_uid6">8 (985) 691-18-91</span><span id="site_uid7"> цены низкие как никогда!</span>
@@ -104,27 +116,27 @@
         <!--        Конец шапки-->
 
 
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$e_magaz_description = get_bloginfo( 'description', 'display' );
-			if ( $e_magaz_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $e_magaz_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+<!--		<div class="site-branding">-->
+<!--			--><?php
+//			the_custom_logo();
+//			if ( is_front_page() && is_home() ) :
+//				?>
+<!--				<h1 class="site-title"><a href="--><?php //echo esc_url( home_url( '/' ) ); ?><!--" rel="home">--><?php //bloginfo( 'name' ); ?><!--</a></h1>-->
+<!--				--><?php
+//			else :
+//				?>
+<!--				<p class="site-title"><a href="--><?php //echo esc_url( home_url( '/' ) ); ?><!--" rel="home">--><?php //bloginfo( 'name' ); ?><!--</a></p>-->
+<!--				--><?php
+//			endif;
+//			$e_magaz_description = get_bloginfo( 'description', 'display' );
+//			if ( $e_magaz_description || is_customize_preview() ) :
+//				?>
+<!--				<p class="site-description">--><?php //echo $e_magaz_description; /* WPCS: xss ok. */ ?><!--</p>-->
+<!--			--><?php //endif; ?>
+<!--		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'e-magaz' ); ?></button>
+<!--			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">--><?php //esc_html_e( 'Primary Menu', 'e-magaz' ); ?><!--</button>-->
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
