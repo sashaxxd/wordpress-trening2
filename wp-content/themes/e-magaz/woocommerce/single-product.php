@@ -19,7 +19,9 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
-
+/**
+ * Файл отвечает за функионал карточки товара (хлебные крошки)
+ */
 get_header( 'shop' ); ?>
 
 	<?php
