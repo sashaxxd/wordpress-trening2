@@ -12,7 +12,8 @@ register_nav_menus(array(
 function e_magaz_primary_menu(){
     wp_nav_menu( array(
         'theme_location' => 'one',
-        'menu_id'        => 'one',
+        'menu_id'        => 'ResponsiveMenu',
+        'menu_class' => 'ResponsiveMenu'
 
 
     ) );

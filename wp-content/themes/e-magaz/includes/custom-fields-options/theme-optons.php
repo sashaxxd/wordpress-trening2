@@ -20,7 +20,7 @@ Container::make( 'theme_options', 'Настройки темы' )
             ->set_width( 70 ),
     ) )
     ->add_tab( 'Подвал', array(
-        Field::make( 'text', 'crb_email', 'Notification Email' ),
-        Field::make( 'text', 'crb_phone', 'Phone Number' ),
+        Field::make( 'text', 'est_footer_text', 'Текст в футере' ),
+
     ) );
 

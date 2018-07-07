@@ -39,6 +39,10 @@ function e_magaz_style() {
     wp_enqueue_style('layout', get_template_directory_uri() . '/assets/css/layout.css', array() , null, 'all');
     wp_enqueue_style('index', get_template_directory_uri() . '/assets/css/index.css', array() , null, 'all');
     wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/style.css', array() , null, 'all');
+    wp_enqueue_style('breadcrumb', get_template_directory_uri() . '/assets/css/breadcrumb.css', array() , null, 'all');
 
+    /**
+     * style.css
+     */
     wp_enqueue_style( 'e-magaz-style', get_stylesheet_uri() );
 }

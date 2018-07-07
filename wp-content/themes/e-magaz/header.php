@@ -1,15 +1,3 @@
-<?php
-/**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package e-magaz
- */
-
-?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -23,7 +11,7 @@
 <body <?php body_class(); ?>>
 
 <div id="page" class="site">
-<!--	<a class="skip-link screen-reader-text" href="#content">--><?php //esc_html_e( 'Skip to content', 'e-magaz' ); ?><!--</a>-->
+
 
 	<header id="masthead" class="site-header">
         <!--        Шапка -->
@@ -57,20 +45,22 @@
                                         </div>
                                     </div>
                                     <div class="col-2">
+                                 <!--      Меню -->
                                         <div id="site_ResponsiveMenu">
+
+                                            <label class="toggle" for="ResponsiveMenu-submenu" id="ResponsiveMenu-title"><span id="ResponsiveMenu-icon"><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></span></label>
+                                            <input type="checkbox" id="ResponsiveMenu-submenu">
                                             <?php
                                             e_magaz_primary_menu();
                                             ?>
-                                            <label class="toggle" for="ResponsiveMenu-submenu" id="ResponsiveMenu-title"><span id="ResponsiveMenu-icon"><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></span></label>
-                                            <input type="checkbox" id="ResponsiveMenu-submenu">
-                                            <ul class="ResponsiveMenu" id="ResponsiveMenu">
-                                                <li><a href="#">&#1043;&#1083;&#1072;&#1074;&#1085;&#1072;&#1103;</a></li>
-                                                <li><a href="#">&#1058;&#1088;&#1080;&#1082;&#1086;&#1090;&#1072;&#1078;&#1085;&#1099;&#1077;&nbsp;&#1082;&#1086;&#1089;&#1090;&#1102;&#1084;&#1099;</a></li>
-                                                <li><a href="#">&#1042;&#1103;&#1079;&#1072;&#1085;&#1099;&#1077;&nbsp;&nbsp;&#1082;&#1086;&#1089;&#1090;&#1102;&#1084;&#1099;</a></li>
-                                                <li><a href="#">&#1055;&#1083;&#1072;&#1090;&#1100;&#1103;</a></li>
-                                                <li><a href="#">&#1044;&#1086;&#1089;&#1090;&#1072;&#1074;&#1082;&#1072;&nbsp;&#1080;&nbsp;&#1086;&#1087;&#1083;&#1072;&#1090;&#1072;</a></li>
-
-                                            </ul>
+<!--                                            <ul class="ResponsiveMenu" id="ResponsiveMenu">-->
+<!--                                                <li><a href="#">&#1043;&#1083;&#1072;&#1074;&#1085;&#1072;&#1103;</a></li>-->
+<!--                                                <li><a href="#">&#1058;&#1088;&#1080;&#1082;&#1086;&#1090;&#1072;&#1078;&#1085;&#1099;&#1077;&nbsp;&#1082;&#1086;&#1089;&#1090;&#1102;&#1084;&#1099;</a></li>-->
+<!--                                                <li><a href="#">&#1042;&#1103;&#1079;&#1072;&#1085;&#1099;&#1077;&nbsp;&nbsp;&#1082;&#1086;&#1089;&#1090;&#1102;&#1084;&#1099;</a></li>-->
+<!--                                                <li><a href="#">&#1055;&#1083;&#1072;&#1090;&#1100;&#1103;</a></li>-->
+<!--                                                <li><a href="#">&#1044;&#1086;&#1089;&#1090;&#1072;&#1074;&#1082;&#1072;&nbsp;&#1080;&nbsp;&#1086;&#1087;&#1083;&#1072;&#1090;&#1072;</a></li>-->
+<!---->
+<!--                                            </ul>-->
                                         </div>
                                     </div>
                                     <div class="col-3">
@@ -116,34 +106,8 @@
         <!--        Конец шапки-->
 
 
-<!--		<div class="site-branding">-->
-<!--			--><?php
-//			the_custom_logo();
-//			if ( is_front_page() && is_home() ) :
-//				?>
-<!--				<h1 class="site-title"><a href="--><?php //echo esc_url( home_url( '/' ) ); ?><!--" rel="home">--><?php //bloginfo( 'name' ); ?><!--</a></h1>-->
-<!--				--><?php
-//			else :
-//				?>
-<!--				<p class="site-title"><a href="--><?php //echo esc_url( home_url( '/' ) ); ?><!--" rel="home">--><?php //bloginfo( 'name' ); ?><!--</a></p>-->
-<!--				--><?php
-//			endif;
-//			$e_magaz_description = get_bloginfo( 'description', 'display' );
-//			if ( $e_magaz_description || is_customize_preview() ) :
-//				?>
-<!--				<p class="site-description">--><?php //echo $e_magaz_description; /* WPCS: xss ok. */ ?><!--</p>-->
-<!--			--><?php //endif; ?>
-<!--		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-<!--			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">--><?php //esc_html_e( 'Primary Menu', 'e-magaz' ); ?><!--</button>-->
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
