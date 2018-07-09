@@ -26,6 +26,23 @@ get_header();
 				<header>
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
+                <div id="site_hit">
+                    <div id="hit">
+                        <div class="row">
+                            <div class="col-1">
+                                <div id="site_Text2">
+                            <span id="site_uid5">
+                                <?php  $site_name = carbon_get_theme_option('est_site_name') ? carbon_get_theme_option('est_site_name') : get_bloginfo('name'); ?>
+                                <?php echo $site_name; ?>
+                               </span>
+                                </div>
+                                <div id="site_Text3">
+                                    <span id="site_uid6">8 (985) 691-18-91</span><span id="site_uid7"> цены низкие как никогда!</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 				<?php
 			endif;
 

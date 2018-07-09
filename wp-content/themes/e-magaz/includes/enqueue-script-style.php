@@ -46,7 +46,7 @@ function e_magaz_style() {
      */
     if ( is_product() ) {
 
-        wp_enqueue_style('her', get_template_directory_uri() . '/assets/css/her.css', array() , null, 'all');
+        wp_enqueue_style('kartochka_tovara', get_template_directory_uri() . '/assets/css/kartochka_tovara.css', array() , null, 'all');
 
     } else {
         // ничего не делаем

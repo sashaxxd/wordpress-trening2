@@ -85,6 +85,12 @@
                 </div>
             </div>
         </div>
+        <?php
+
+
+        if ( is_home() ) :
+        ?>
+
         <div id="site_hit">
             <div id="hit">
                 <div class="row">
@@ -102,6 +108,9 @@
                 </div>
             </div>
         </div>
+<?php
+endif;
+?>
 
         <!--        Конец шапки-->
 

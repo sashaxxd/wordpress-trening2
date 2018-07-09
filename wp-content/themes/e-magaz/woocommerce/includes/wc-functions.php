@@ -1,25 +1,53 @@
 <?php
-/**
-*  Стили
-*/
-function is_single_w ()
-{
-    if (is_product()) {
-        echo '55';
-    } else {
-        echo '0';
-    }
-}
-
-?>
-
-<?php
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
-?>
 
-<?php
+
+
+/**
+ *  Это карточка товара
+ */
+function is_single_w ()
+{
+    if (is_product()) {
+        echo 'Это карточка товара';
+    } else {
+        echo null;
+    }
+}
+
+/**
+ *  Это корзина
+ */
+function is_cart_w ()
+{
+    if (is_cart()) {
+        echo 'корзина';
+    } else {
+        echo null;
+    }
+}
+
+
+/**
+ *  Это корзина
+ */
+function is_shop_w ()
+{
+    if (is_shop()) {
+        echo 'Это магазин';
+    } else {
+        echo null;
+    }
+}
+
+
+
+
+
+
+
 /**
  * Функция проверки на страницу woocommerce
  */
@@ -46,10 +74,7 @@ return true ;
 }
 return false;
 }
-?>
 
-
-<?php
 /**
  * Хлебные крошки
  *
@@ -64,8 +89,9 @@ function main_breadcrumb(){
     ?>
     <div id="wb_bread">
         <?php
-
+        is_cart_w ();
         is_single_w();
+        is_shop_w ();
         ?>
         <div id="bread">
             <div class="row">
@@ -127,7 +153,7 @@ function main_wrapper_product_final(){
 }
 
 
-add_action( 'woocommerce_before_single_product_summary', 'main_wrapper_product_image_start', 5 );
+add_action( 'woocommerce_before_single_product_summary', 'main_wrapper_product_image_start', 10 );
 function main_wrapper_product_image_start() {
     ?>
     <div class="хуй">
@@ -136,6 +162,37 @@ function main_wrapper_product_image_start() {
 add_action( 'woocommerce_before_single_product_summary', 'main_wrapper_product_image_end', 25 );
 function main_wrapper_product_image_end() {
     ?>
+    </div>
+    <?php
+}
+
+/**
+ * Тайтл карточки
+ */
+add_action('woocommerce_before_single_product', 'main_woocommerce_template_single_title', 5);
+function main_woocommerce_template_single_title() {
+    ?>
+    <div id="cp_Card_Product1">
+        <div id="Card_Product1">
+            <div class="row">
+                <div class="col-1">
+                    <div id="cp_Text6">
+                        <span id="cp_uid5">
+                            <?php
+                            /**
+                             *  woocommerce_template_single_title(); функция выведет тайтл с тегом h1
+                             */
+                            /**
+                             *  the_title(); функция выведет тайтл без тега h1
+                             */
+
+                            the_title();
+                             ?>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <?php
 }
