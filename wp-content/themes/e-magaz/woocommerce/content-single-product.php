@@ -17,7 +17,7 @@
 
 defined( 'ABSPATH' ) || exit;
 /**
- * Файл отвечает за
+ * Файл отвечает за карточку товара
  */
 /**
  * Hook: woocommerce_before_single_product.

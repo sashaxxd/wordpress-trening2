@@ -42,6 +42,17 @@ function e_magaz_style() {
     wp_enqueue_style('breadcrumb', get_template_directory_uri() . '/assets/css/breadcrumb.css', array() , null, 'all');
 
     /**
+     * Если карточна товара подключаем отдельный css файл is_product() дефолтная функция woocommerce
+     */
+    if ( is_product() ) {
+
+        wp_enqueue_style('her', get_template_directory_uri() . '/assets/css/her.css', array() , null, 'all');
+
+    } else {
+        // ничего не делаем
+    }
+
+    /**
      * style.css
      */
     wp_enqueue_style( 'e-magaz-style', get_stylesheet_uri() );

@@ -1,3 +1,7 @@
+ТУТ ФУНКЦИИ WORDPRESS https://wp-kama.ru/functions
+ТУТ ФУНКЦИИ WOOCOMMERCE https://docs.woocommerce.com/wc-apidocs/package-WooCommerce.Functions.html
+
+
 1. Геренация базовых файлов для шаблона вордпресс https://underscores.me/
 2. Переносим все файлы в папку шаблона удаляем ненужные файлы
 3. Создаем каталог templates в папк шаблона

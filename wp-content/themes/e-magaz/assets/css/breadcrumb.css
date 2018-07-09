@@ -38,8 +38,7 @@
     box-sizing: border-box;
     clear: both;
     display: table;
-    position: absolute;
-    z-index: 999999999999999999999999999999999999999999999999999;
+    position: relative;
     table-layout: fixed;
     text-align: center;
     width: 100%;
